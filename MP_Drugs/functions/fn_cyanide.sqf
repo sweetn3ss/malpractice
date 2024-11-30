@@ -13,15 +13,15 @@
  * Public: No
  */
  
-systemChat "Parameters Init";
+// systemChat "Parameters Init";
  
 diag_log ["_medic", "_patient"];
 
-systemChat "Parameters set, calling function";
+// systemChat "Parameters set, calling function";
 
 diag_log [_patient] call ace_medical_status_fnc_setDead;
 
-systemChat "Function called, running addToLog";
+// systemChat "Function called, running addToLog";
 
 if (_medic == _patient) then {
     [_patient, "activity", "%1 ingested Cyanide", [[_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
@@ -31,4 +31,4 @@ if (_medic == _patient) then {
     _patient setDamage 1;
 };
 
-systemChat "All done, green across the board.";
+// systemChat "All done, green across the board.";
