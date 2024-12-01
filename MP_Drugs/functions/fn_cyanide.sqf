@@ -17,10 +17,6 @@
  
 diag_log ["_medic", "_patient"];
 
-// systemChat "Parameters set, calling function";
-
-diag_log [_patient] call ace_medical_status_fnc_setDead;
-
 // systemChat "Function called, running addToLog";
 
 if (_medic == _patient) then {
