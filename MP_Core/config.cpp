@@ -16,7 +16,7 @@ class cfgVehicles {
         scope=2;
         scopeArsenal=2;
         displayName = "Invisible Backpack";
-        model="";
+		model = "\a3\weapons_f\empty.p3d";
         maximumLoad = 500;
     };
 };
