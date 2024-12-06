@@ -8,3 +8,12 @@ class cfgPatches {
         weapons[]={};
     };
 };
+class cfgVehicles {
+    class Bag_Base;
+    class MP_Satchel: Bag_Base {
+        scope=2;
+        scopeArsenal=2;
+        displayName = "Invisible Backpack";
+        model="";
+    };
+};
