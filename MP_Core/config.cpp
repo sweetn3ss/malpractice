@@ -2,7 +2,9 @@ class cfgPatches {
     class MP_Core {
         name = "Malpractice Core";
         requiredVersion = 0.1;
-        requiredAddons[]={};
+        requiredAddons[]={
+            "A3_Weapons_F_Ammoboxes"
+        };
         author = "Gray";
         units[]={};
         weapons[]={};
@@ -15,5 +17,6 @@ class cfgVehicles {
         scopeArsenal=2;
         displayName = "Invisible Backpack";
         model="";
+        maximumLoad = 500;
     };
 };

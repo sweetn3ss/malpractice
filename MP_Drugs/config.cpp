@@ -37,7 +37,7 @@ class cfgWeapons
         author="Gray";
         descriptionShort="Your epic.";
         descriptionUse="I don't know how to cause this text to appear.";
-        model = "MP_Drugs\data\choccymilk.p3d";
+        model = "\MP_Drugs\data\choccymilky.p3d";
     };
 };
 
@@ -78,6 +78,6 @@ class cfgVehicles {
     class MP_Litter_ChocolateMilk: ACE_MedicalLitter_morphine {
         displayName = "";
         simulation = "thing";
-        model = "\MP_Drugs\data\choccymilk.p3d";
+        model = "\MP_Drugs\data\choccymilky.p3d";
     };
 };
