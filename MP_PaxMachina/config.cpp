@@ -24,6 +24,9 @@ class cfgAmmo {
     class MP_Dart_Bandage: B_9x21_Ball_Tracer_Red {
         hit = 0;
         model = "\A3\Weapons_f\Data\bullettracer\tracer_Red";
+        class EventHandlers {
+            ammoHit = "systemChat format ['sex i guess']";
+        };
     };
 };
 class cfgMagazines {
@@ -47,20 +50,6 @@ class cfgWeapons {
         baseWeapon = "MP_Aegis";
         magazines[] = {
             "8Rnd_Aegis_Bandage"
-        };
-    };
-};
-/*
-class Extended_Hit_EventHandlers {
-    class CAManBase {
-        MP_Stimmy = "_this call MP_PaxMachina_fnc_stimSwitch;";
-    };
-};
-*/
-class Extended_Hit_EventHandlers {
-    class CAManBase {
-        class MP_Stim_EH {
-            Hit = "_this call MP_PaxMachina_fnc_stimSwitch;";
         };
     };
 };
