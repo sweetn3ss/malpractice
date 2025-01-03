@@ -50,8 +50,17 @@ class cfgWeapons {
         };
     };
 };
+/*
 class Extended_Hit_EventHandlers {
     class CAManBase {
         MP_Stimmy = "_this call MP_PaxMachina_fnc_stimSwitch;";
+    };
+};
+*/
+class Extended_Hit_EventHandlers {
+    class CAManBase {
+        class MP_Stim_EH {
+            Hit = "_this call MP_PaxMachina_fnc_stimSwitch;";
+        };
     };
 };
