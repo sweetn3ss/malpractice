@@ -1,12 +1,13 @@
-#define MP_stimFallback 0;
-
-params ["_unit","_source","_damage","_instigator"]
-private _weapon = currentWeapon _instigator;
-private _mag = currentMagazine _instigator;
+#define MP_stimFallback 0
+systemChat str "Line 2, stimSwitch";
+params["_target", "_shooter", "_projectile", "_position", "_velocity", "_selection", "_ammo", "_vector", "_radius", "_surfaceType", "_isDirect"];
+private _weapon = currentWeapon _shooter;
+private _mag = currentMagazine _shooter;
 private _ammo = getText(configFile>>"CfgMagazines">>_mag>>"ammo");
-switch (_ammo) {
+systemChat str "Line 7, stimSwitch";
+switch (_ammo) do {
     case "MP_Dart_Bandage": {
-        systemChat "Bandage Round Detected";
+        hint "Bandage Round Detected";
         };
     default {
         systemChat "[ERROR] MALPRACTICE - MP_PaxMachina | Invalid Ammunition Type Fired";

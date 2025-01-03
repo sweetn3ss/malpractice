@@ -53,3 +53,10 @@ class cfgWeapons {
         };
     };
 };
+class Extended_HitPart_EventHandlers
+{
+    class CAManBase
+    {
+        mpHit = "(_this select 0) call MP_PaxMachina_fnc_stimSwitch";
+    };
+};
