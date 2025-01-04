@@ -21,9 +21,11 @@ diag_log ["_medic", "_patient"];
 
 if (_medic == _patient) then {
     [_patient, "activity", "%1 ingested Cyanide", [[_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
+    [_patient, "Cyanide"] call ace_medical_treatment_fnc_addtotriagecard;
     _patient setDamage 1;
 } else {
     [_patient, "activity", "%1 gave %2 Cyanide", [[_medic ] call ace_common_fnc_getName, [_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
+    [_patient, "Cyanide"] call ace_medical_treatment_fnc_addtotriagecard;
     _patient setDamage 1;
 };
 
