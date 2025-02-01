@@ -17,6 +17,8 @@ class cfgFunctions {
             file = "MP_Drugs\functions";
             class cyanide {}; // MP_fnc_cyanide;
             class chocolatemilk {}; // MP_fnc_chocolatemilk;
+            class mugManiac {}; // MP_fnc_mugManiac;
+            class mugManiacLocal {}; // MP_fnc_mugManiacLocal;
         };
     };
 };
@@ -51,6 +53,14 @@ class cfgWeapons
         descriptionUse="Great for you, your kids, and your Johnson!";
         model = "\MP_Drugs\data\bandages.p3d";
         picture = "\MP_Drugs\data\bandages.paa";
+    };
+    class ACE_bloodIV;
+    class MP_IV_MugManiac: ACE_bloodIV {
+        displayName = "Mug IV (1000ml)";
+        author = "Gray";
+        descriptionShort = "Only true #mugmaniacs can drink this.";
+        descriptionUse = "How in god's name do I make this appear???";
+        hiddenSelectionsTextures[] = {"MP_Drugs\data\mug_bag.paa"};
     };
 };
 
@@ -100,11 +110,25 @@ class Ace_Medical_Treatment_Actions
         animationMedic="AinvPknlMstpSnonWnonDnon_medic1";
         sounds[]={{"\z\ace\addons\field_rations\sounds\drink2.ogg",1,1,50}};*/
     };
+    class BloodIV;
+    class MugIV: BloodIV {
+        displayName = "Give Mug IV (1000ml)";
+        items[] = {"MP_IV_MugManiac"};
+        displayNameProgress = "Conducting Mug Mania...";
+        treatmentTime = 6;
+    };
 };
 class Ace_Medical_Treatment {
     class Bandaging {
         class ElasticBandage;
         class HKBandages: ElasticBandage {};
+    };
+    class IV {
+        class MugIV {
+            volume = 1000;
+            type = "Mug";
+            rateCoef = 1;
+        };
     };
 };
 class cfgVehicles {
