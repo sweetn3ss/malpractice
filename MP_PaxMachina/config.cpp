@@ -16,7 +16,6 @@ class cfgFunctions {
         class functions {
             file = "MP_PaxMachina\functions";
             class stimSwitch {}; // MP_PaxMachina_fnc_stimSwitch;
-            class stimCyanide {}; // MP_PaxMachina_fnc_stimSwitch;
         };
     };
 };

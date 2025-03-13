@@ -11,6 +11,7 @@ class cfgPatches {
         };
     };
 };
+
 class cfgFunctions {
     class MP {
         class functions {
@@ -118,6 +119,7 @@ class Ace_Medical_Treatment_Actions
         treatmentTime = 6;
     };
 };
+
 class Ace_Medical_Treatment {
     class Bandaging {
         class ElasticBandage;
@@ -131,6 +133,7 @@ class Ace_Medical_Treatment {
         };
     };
 };
+
 class cfgVehicles {
     class ACE_MedicalLitter_morphine;
     class MP_Litter_ChocolateMilk: ACE_MedicalLitter_morphine {
