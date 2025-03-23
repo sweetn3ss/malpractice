@@ -53,4 +53,7 @@ switch (_ammo) do {
         [_patient, "Painkillers", 60, 420, 5, 0.35, 5] call ace_medical_status_fnc_addMedicationAdjustment;
         [_patient, "Painkiller Dart"] call ace_medical_treatment_fnc_addtotriagecard;
     };
+    case "MP_Buckshot_Benadryl": {
+        //player execVM
+    };
 };
