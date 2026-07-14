@@ -38,6 +38,14 @@ class cfgAmmo {
         hit = 0;
         model = "\A3\Weapons_f\Data\bullettracer\tracer_Red";
     };
+    class MP_Dart_EACA: MP_Dart_Bandage {
+        hit = 0;
+        model = "\A3\Weapons_f\Data\bullettracer\tracer_Red";
+    };
+    class MP_Dart_TXA: MP_Dart_Bandage {
+        hit = 0;
+        model = "\A3\Weapons_f\Data\bullettracer\tracer_Red";
+    };
 };
 class cfgMagazines {
     class 16rnd_9x21_Mag;
@@ -73,6 +81,22 @@ class cfgMagazines {
         ammo = "MP_Dart_Painkiller";
         lastRoundsTracer = 0;
     };
+    class 8Rnd_Aegis_EACA: 16rnd_9x21_Mag {
+        displayName = "8Rnd EACA Stim";
+        author = "Gray";
+        count = 8;
+        tracersEvery = 1;
+        ammo = "MP_Dart_EACA";
+        lastRoundsTracer = 0;
+    };
+    class 8Rnd_Aegis_TXA: 16rnd_9x21_Mag {
+        displayName = "8Rnd TXA Stim";
+        author = "Gray";
+        count = 8;
+        tracersEvery = 1;
+        ammo = "MP_Dart_EACA";
+        lastRoundsTracer = 0;
+    };
 };
 class cfgWeapons {
     class hgun_Rook40_F;
@@ -83,9 +107,12 @@ class cfgWeapons {
         author = "Gray";
         baseWeapon = "MP_Aegis";
         magazines[] = {
+            "8Rnd_Aegis_Bandage",
             "8Rnd_Aegis_Cyanide",
             "8Rnd_Aegis_Tranq",
-            "8Rnd_Aegis_Painkiller"
+            "8Rnd_Aegis_Painkiller",
+            "8Rnd_Aegis_EACA",
+            "8Rnd_Aegis_TXA"
         };
     };
 };

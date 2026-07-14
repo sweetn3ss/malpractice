@@ -27,20 +27,24 @@ _patient = _target;
 _bodyPart = _selection;
 
 switch (_ammo) do {
-    /*case "MP_Dart_Bandage": {
-        systemChat format ["Target: %1",_target];
-        systemChat format ["Shooter: %1",_shooter];
-        systemChat format ["Selection: %1",_selection];
-        [_medic,_patient,_bodyPart,"QuikClot",_medic,"",0] call ace_medical_treatment_fnc_treatmentSuccess;
-        [_patient, "activity", "%2 shot %1 with a Bandage", [[_medic ] call ace_common_fnc_getName, [_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
-    };*/
+    case "MP_Dart_Bandage": {
+        if (_medic == _patient) then {
+            [_patient, "activity", "%1 shot themself with Lazarus Goo", [[_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
+            [_patient, _selection] call kat_pharma_fnc_treatmentAdvanced_TXALocal;
+            [_patient, _selection] call kat_pharma_fnc_treatmentAdvanced_EACALocal;
+        } else {
+            [_patient, "activity", "%1 shot %2 with Lazarus Goo", [[_medic] call ace_common_fnc_getName, [_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
+            [_patient, _selection] call kat_pharma_fnc_treatmentAdvanced_TXALocal;
+            [_patient, _selection] call kat_pharma_fnc_treatmentAdvanced_EACALocal;
+        };
+    };
     case "MP_Dart_Cyanide": {
         if (_medic == _patient) then {
         [_patient, "activity", "%1 shot themself with Cyanide", [[_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
         [_patient,"Cyanide Dart"] call ace_medical_treatment_fnc_addtotriagecard;
         _patient setDamage 1;
         } else {
-            [_patient, "activity", "%1 shot %2 with Cyanide", [[_medic ] call ace_common_fnc_getName, [_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
+            [_patient, "activity", "%1 shot %2 with Cyanide", [[_medic] call ace_common_fnc_getName, [_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
             [_patient, "Cyanide Dart"] call ace_medical_treatment_fnc_addtotriagecard;
             _patient setDamage 1;
         };
@@ -53,7 +57,25 @@ switch (_ammo) do {
         [_patient, "Painkillers", 60, 420, 5, 0.35, 5] call ace_medical_status_fnc_addMedicationAdjustment;
         [_patient, "Painkiller Dart"] call ace_medical_treatment_fnc_addtotriagecard;
     };
-    case "MP_Buckshot_Benadryl": {
+    /*case "MP_Buckshot_Benadryl": {
         //player execVM
+    };*/
+    case "MP_Dart_EACA": {
+        if (_medic == _patient) then {
+            [_patient, "activity", "%1 shot themself with EACA", [[_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
+            [_patient, _selection] call kat_pharma_fnc_treatmentAdvanced_EACALocal;
+        } else {
+            [_patient, "activity", "%1 shot %2 with EACA", [[_medic] call ace_common_fnc_getName, [_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
+            [_patient, _selection] call kat_pharma_fnc_treatmentAdvanced_EACALocal;
+        };
+    };
+    case "MP_Dart_TXA": {
+        if (_medic == _patient) then {
+            [_patient, "activity", "%1 shot themself with TXA", [[_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
+            [_patient, _selection] call kat_pharma_fnc_treatmentAdvanced_TXALocal;
+        } else {
+            [_patient, "activity", "%1 shot %2 with TXA", [[_medic] call ace_common_fnc_getName, [_patient] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
+            [_patient, _selection] call kat_pharma_fnc_treatmentAdvanced_TXALocal;
+        };
     };
 };
