@@ -94,7 +94,7 @@ class cfgMagazines {
         author = "Gray";
         count = 8;
         tracersEvery = 1;
-        ammo = "MP_Dart_EACA";
+        ammo = "MP_Dart_TXA";
         lastRoundsTracer = 0;
     };
 };
